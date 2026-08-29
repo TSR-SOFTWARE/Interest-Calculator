@@ -4,6 +4,7 @@ import Result from "./Result";
 import calculateTime from "../utils/calculateTime";
 import calculateInterest from "../utils/calculateInterest";
 import validateInput from "../utils/validation";
+import { useTheme } from "../context/useTheme";
 
 function Calculator(){
   const [principal, setPrincipal] = useState("");
@@ -21,9 +22,7 @@ function Calculator(){
   const [error, setError] = useState([]);
   const [timeType, setTimeType] = useState("date");
   const [isCalculated, setIsCalculated] = useState(false);
-  const [theme, setTheme] = useState(
-    localStorage.getItem("theme") || "light"
-  );
+  const { theme, changeTheme } = useTheme();
 
   
   function handleCalculate() {
@@ -161,9 +160,7 @@ function Calculator(){
             id="theme"
             value={theme}
             onChange={(event) => {
-              const selectedTheme = event.target.value;
-              setTheme(selectedTheme);
-              localStorage.setItem("theme", selectedTheme);
+              changeTheme(event.target.value);
             }}
           >
             <option value="light">Light</option>
