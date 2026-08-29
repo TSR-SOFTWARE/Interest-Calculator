@@ -1,0 +1,1034 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f1f5f9;
+  font-family: Arial, sans-serif;
+  color: #111827;
+}
+
+
+/* =========================================
+   CALCULATOR CARD
+========================================= */
+
+.Calculator {
+  width: 100%;
+  max-width: 520px;
+  margin: 50px auto;
+  padding: 30px;
+
+  background: #ffffff;
+  border-radius: 18px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================
+   MAIN HEADING
+========================================= */
+
+.Calculator h1 {
+  margin: 0 0 30px;
+
+  text-align: center;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  color: #1e3a8a;
+}
+
+
+/* =========================================
+   INTEREST TYPE SECTION
+========================================= */
+
+.Interest-type {
+  width: 100%;
+}
+
+
+/* Interest Type Heading */
+
+.Interest-type > div:first-child {
+  text-align: center;
+}
+
+.Interest-type > div:first-child label {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+
+/* =========================================
+   RADIO BUTTONS
+========================================= */
+
+.Interest-type > div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+
+  margin: 25px 0;
+}
+
+.Interest-type > div:nth-child(2) label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 16px;
+  color: #374151;
+
+  cursor: pointer;
+}
+
+.Interest-type input[type="radio"] {
+  width: 18px;
+  height: 18px;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   COMPOUND FREQUENCY
+========================================= */
+
+.compound-frequency-wrapper {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.compound-frequency {
+  width: 100%;
+}
+
+.compound-frequency label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  color: #374151;
+}
+
+.compound-frequency select {
+  display: block;
+
+  width: 100%;
+  height: 45px;
+
+  padding: 0 12px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  font-size: 16px;
+  color: #111827;
+
+  cursor: pointer;
+}
+
+.compound-frequency select:hover {
+  border-color: #9ca3af;
+}
+
+.compound-frequency select:focus {
+  outline: none;
+
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+
+/* =========================================
+   INPUT FIELDS AREA
+========================================= */
+
+.Interest-type > div:nth-child(4) {
+  width: 100%;
+}
+
+
+/* =========================================
+   INPUT FIELD CARD
+========================================= */
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 18px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================
+   INPUT LABEL
+========================================= */
+
+.input-field label {
+  display: block;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  color: #1e3a8a;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.input-field input {
+  display: block;
+
+  width: 100%;
+  height: 45px;
+
+  padding: 0 14px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  font-size: 16px;
+  color: #111827;
+
+  outline: none;
+}
+
+.input-field input:hover {
+  border-color: #9ca3af;
+}
+
+.input-field input:focus {
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+
+
+
+
+
+
+
+/* Calculate */
+
+.calculate-button {
+  background-color: #16a34a;
+}
+
+.calculate-button:hover {
+  background-color: #15803d;
+}
+
+
+/* Reset */
+
+.reset-button {
+  background-color: #dc2626;
+}
+
+.reset-button:hover {
+  background-color: #b91c1c;
+}
+
+
+
+
+/* =========================================
+   TIME DISPLAY
+========================================= */
+
+.Interest-type > div:nth-child(5) p {
+  margin: 10px 0;
+
+  padding: 12px;
+
+  border-left: 3px solid #2563eb;
+
+  background: #f8fafc;
+
+  font-size: 16px;
+  color: #374151;
+}
+
+
+/* =========================================
+   RESULT
+========================================= */
+
+.Interest-type > div:nth-child(6) {
+  margin-top: 25px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+/*@media (max-width: 600px) {
+
+  .Calculator {
+    width: calc(100% - 30px);
+
+    margin: 25px auto;
+    padding: 22px;
+  }
+
+  .Calculator h1 {
+    font-size: 26px;
+    margin-bottom: 25px;
+  }
+
+  .Interest-type > div:nth-child(2) {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .compound-frequency select {
+    height: 44px;
+  }
+
+  .input-field {
+    padding: 16px;
+  }
+
+}*/
+/* =========================================
+   ERROR POPUP OVERLAY
+========================================= */
+
+.error-overlay {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1000;
+}
+
+
+/* =========================================
+   ERROR POPUP
+========================================= */
+
+.error-popup {
+  width: calc(100% - 40px);
+  max-width: 400px;
+
+  padding: 25px;
+
+  background: #ffffff;
+
+  border-radius: 14px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+
+  text-align: center;
+}
+
+
+/* =========================================
+   ERROR HEADING
+========================================= */
+
+.error-popup h2 {
+  margin: 0 0 20px;
+
+  font-size: 22px;
+
+  color: #b91c1c;
+}
+
+
+/* =========================================
+   ERROR LIST
+========================================= */
+
+.error-list {
+  text-align: left;
+
+  margin-bottom: 20px;
+}
+
+.error-list p {
+  margin: 8px 0;
+
+  font-size: 15px;
+
+  color: #374151;
+}
+
+
+/* =========================================
+   OK BUTTON
+========================================= */
+
+.error-ok-button {
+  padding: 10px 28px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.error-ok-button:hover {
+  background: #1d4ed8;
+}
+/* =========================================
+   RESULT
+========================================= */
+
+.result {
+  margin-top: 25px;
+  padding: 20px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Result Heading */
+
+.result h2 {
+  margin: 0 0 20px;
+
+  text-align: center;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #1e3a8a;
+}
+
+
+/* Result Item */
+
+.result-item {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 14px 10px;
+
+  border-left: 3px solid #2563eb;
+
+  margin-bottom: 12px;
+
+  background: #ffffff;
+
+  border-radius: 6px;
+}
+
+
+/* Label */
+
+.result-item span:first-child {
+  font-size: 16px;
+  font-weight: 600;
+
+  color: #374151;
+}
+
+
+/* Value */
+
+.result-item span:last-child {
+  font-size: 17px;
+  font-weight: 700;
+
+  color: #1e3a8a;
+}
+/* =========================================
+   TIME RESULT
+========================================= */
+
+.time-result {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 15px 0;
+  padding: 14px 12px;
+
+  background: #f8fafc;
+
+  border-left: 3px solid #2563eb;
+  border-radius: 6px;
+}
+
+
+/* Time Label */
+
+.time-result span:first-child {
+  font-size: 16px;
+  font-weight: 700;
+
+  color: #1e3a8a;
+}
+
+
+/* Time Value */
+
+.time-result span:last-child {
+  font-size: 15px;
+  font-weight: 600;
+
+  color: #374151;
+}
+/* =========================================
+   RATE TYPE
+========================================= */
+
+.rate-type {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  margin: 15px 0;
+  padding: 16px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Rate Type Heading */
+
+.rate-type > label:first-child {
+  font-size: 17px;
+  font-weight: 700;
+
+  color: #1e3a8a;
+}
+
+
+/* Radio Labels */
+
+.rate-type > label:not(:first-child) {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 15px;
+  color: #374151;
+
+  cursor: pointer;
+}
+
+
+/* Radio Button */
+
+.rate-type input[type="radio"] {
+  width: 16px;
+  height: 16px;
+
+  accent-color: #2563eb;
+
+  cursor: pointer;
+}
+/* =========================================
+   COMPOUND FREQUENCY WRAPPER
+========================================= */
+
+.compound-frequency-wrapper {
+  width: 100%;
+}
+
+
+/* =========================================
+   COMPOUND FREQUENCY
+========================================= */
+
+.compound-frequency {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  width: 100%;
+  margin: 15px 0;
+  padding: 16px;
+
+  box-sizing: border-box;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.compound-frequency label {
+  font-size: 17px;
+  font-weight: 700;
+
+  color: #1e3a8a;
+}
+
+
+/* =========================================
+   SELECT
+========================================= */
+
+.compound-frequency select {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 12px 14px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  font-size: 16px;
+  color: #111827;
+
+  outline: none;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* Hover */
+
+.compound-frequency select:hover {
+  border-color: #9ca3af;
+}
+
+
+/* Focus */
+
+.compound-frequency select:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 600px) {
+
+  .Calculator {
+    width: calc(100% - 30px);
+    margin: 25px auto;
+    padding: 22px;
+
+    box-sizing: border-box;
+  }
+
+  .Calculator h1 {
+    font-size: 26px;
+    margin-bottom: 25px;
+  }
+
+  .input-field {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .input-field input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .rate-type,
+  .compound-frequency {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .compound-frequency select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .time-result {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .result {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .result-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .calculate-button,
+  .reset-button {
+    margin: 5px 3px;
+  }
+  .direct-time {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+}
+/* =========================================
+   RESULT TYPE
+========================================= */
+
+.result-type {
+  margin-bottom: 15px;
+
+  text-align: center;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  color: #64748b;
+}
+/* =========================================
+   INTEREST TYPE
+========================================= */
+
+.interest-type {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  margin: 15px 0;
+  padding: 16px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Heading */
+
+.interest-type > label:first-child {
+  font-size: 17px;
+  font-weight: 700;
+
+  color: #1e3a8a;
+}
+
+
+/* Radio Labels */
+
+.interest-type > label:not(:first-child) {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 15px;
+  color: #374151;
+
+  cursor: pointer;
+}
+
+
+/* Radio */
+
+.interest-type input[type="radio"] {
+  width: 16px;
+  height: 16px;
+
+  accent-color: #2563eb;
+
+  cursor: pointer;
+}
+/* =========================================
+   CALCULATE & RESET BUTTONS
+========================================= */
+
+.calculate-button,
+.reset-button {
+  padding: 12px 24px;
+  min-width: 120px;
+
+  border: none;
+  border-radius: 7px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+
+/* Calculate */
+
+.calculate-button {
+  background-color: #16a34a;
+}
+
+.calculate-button:hover {
+  background-color: #15803d;
+}
+
+
+/* Reset */
+
+.reset-button {
+  background-color: #dc2626;
+}
+
+.reset-button:hover {
+  background-color: #b91c1c;
+}
+/* =========================================
+   DIRECT TIME
+========================================= */
+
+.direct-time {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+
+  width: 100%;
+}
+.direct-time .input-field {
+  flex: 1;
+}
+/* =========================================
+   TIME TYPE
+========================================= */
+
+.time-type {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  margin: 15px 0;
+  padding: 16px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Heading */
+
+.time-type > label:first-child {
+  font-size: 17px;
+  font-weight: 700;
+
+  color: #1e3a8a;
+}
+
+
+/* Options */
+
+.time-options {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+
+/* Radio Labels */
+
+.time-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 15px;
+  color: #374151;
+
+  cursor: pointer;
+}
+
+
+/* Radio */
+
+.time-options input[type="radio"] {
+  width: 16px;
+  height: 16px;
+
+  accent-color: #2563eb;
+
+  cursor: pointer;
+}
+.interest-options {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.rate-options {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+/* =========================================
+   THEME OPTION
+========================================= */
+
+.theme-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  margin-bottom: 20px;
+}
+
+.theme-option label {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.theme-option select {
+  padding: 8px 12px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #111827;
+
+  font-size: 15px;
+
+  outline: none;
+  cursor: pointer;
+}
+/* =========================================
+   DARK THEME
+========================================= */
+
+.Calculator.dark-theme {
+  background: #1e293b;
+  color: #f8fafc;
+}
+
+.Calculator.dark-theme h1 {
+  color: #93c5fd;
+}
+
+.Calculator.dark-theme .interest-type,
+.Calculator.dark-theme .rate-type,
+.Calculator.dark-theme .time-type,
+.Calculator.dark-theme .compound-frequency,
+.Calculator.dark-theme .input-field,
+.Calculator.dark-theme .time-result {
+  background: #334155;
+  border-color: #475569;
+}
+
+.Calculator.dark-theme label {
+  color: #dbeafe;
+}
+
+.Calculator.dark-theme input,
+.Calculator.dark-theme select {
+  background: #1e293b;
+  color: #f8fafc;
+  border-color: #64748b;
+}
+
+.Calculator.dark-theme .theme-option label {
+  color: #93c5fd;
+}
+
+.Calculator.dark-theme .theme-option select {
+  background: #1e293b;
+  color: #f8fafc;
+}
+/* =========================================
+   DARK THEME - TIME RESULT
+========================================= */
+
+.Calculator.dark-theme .time-result {
+  background: #334155;
+  border: 1px solid #475569;
+  color: #f8fafc;
+}
+
+.Calculator.dark-theme .time-result span {
+  color: #f8fafc;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}

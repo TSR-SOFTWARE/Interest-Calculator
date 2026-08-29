@@ -1,0 +1,63 @@
+/* =========================================
+   RESULT SECTION - LIGHT THEME
+========================================= */
+
+.result {
+  margin-top: 5px;
+  padding: 22px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.result h2 {
+  margin-bottom: 18px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.result p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 10px 0;
+  padding: 12px;
+
+  background: #ffffff;
+  border-radius: 8px;
+
+  font-size: 16px;
+  color: #374151;
+}
+
+.result strong {
+  font-size: 17px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+
+/* =========================================
+   RESULT SECTION - DARK THEME
+========================================= */
+
+.Calculator.dark-theme .result {
+  background: #334155;
+  border-color: #475569;
+}
+
+.Calculator.dark-theme .result h2 {
+  color: #93c5fd;
+}
+
+.Calculator.dark-theme .result p {
+  background: #1e293b;
+  color: #f8fafc;
+}
+
+.Calculator.dark-theme .result strong {
+  color: #60a5fa;
+}
