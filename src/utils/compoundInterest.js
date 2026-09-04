@@ -10,25 +10,24 @@ function compoundInterest(
   const p = Number(principal);
   const enteredRate = Number(rate);
 
-  // =================================
+  
   // CONVERT RATE TO MONTHLY RATE
-  // =================================
+  
 
   let monthlyRate;
 
   if (rateType === "percentage") {
-    // Annual percentage → monthly percentage
-    // Example: 26% / 12
+    
     monthlyRate = enteredRate / 12;
+
   } else {
-    // ₹ per ₹100 per month
-    // Example: ₹2 per ₹100 per month → 2%
+  
     monthlyRate = enteredRate;
   }
 
-  // =================================
+  
   // COMPOUNDING PERIOD
-  // =================================
+  
 
   let periodMonths;
 
@@ -40,30 +39,30 @@ function compoundInterest(
     periodMonths = 3;
   }
 
-  // =================================
+
   // TOTAL COMPLETE MONTHS
-  // =================================
+  
 
   const totalMonths =
     Number(years) * 12 + Number(months);
 
-  // =================================
+  
   // COMPLETED COMPOUND PERIODS
-  // =================================
+  
 
   const completedPeriods =
     Math.floor(totalMonths / periodMonths);
 
-  // =================================
+  
   // REMAINING MONTHS
-  // =================================
+  
 
   const remainingMonths =
     totalMonths % periodMonths;
 
-  // =================================
+  
   // NO COMPLETED COMPOUND PERIOD
-  // =================================
+  
 
   if (completedPeriods === 0) {
     const interest =
@@ -83,9 +82,9 @@ function compoundInterest(
     };
   }
 
-  // =================================
+  
   // COMPOUND COMPLETED PERIODS
-  // =================================
+  
 
   const periodRate =
     monthlyRate * periodMonths;
@@ -97,9 +96,9 @@ function compoundInterest(
       completedPeriods
     );
 
-  // =================================
+
   // REMAINING MONTHS
-  // =================================
+  
 
   if (remainingMonths > 0) {
     const remainingMonthInterest =
@@ -110,9 +109,9 @@ function compoundInterest(
     amount += remainingMonthInterest;
   }
 
-  // =================================
+  
   // REMAINING DAYS
-  // =================================
+  
 
   if (Number(days) > 0) {
     const remainingDayInterest =
@@ -123,9 +122,9 @@ function compoundInterest(
     amount += remainingDayInterest;
   }
 
-  // =================================
+  
   // FINAL RESULT
-  // =================================
+  
 
   const interest =
     amount - p;
